@@ -1,38 +1,85 @@
+/* General body and html styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* App container styling */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App bar styling */
+.appBarContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  background-color: #ffffff; /* White background for the app bar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.titleContainer {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cartContainer {
+  display: flex;
+  align-items: center;
+}
+
+/* Product Card styling */
+.MuiCard-root {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.MuiCardMedia-root {
+  height: 300px;
+}
+
+.MuiCardContent-root {
+  text-align: center;
+}
+
+.MuiCardActions-root {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Cart Page styling */
+.CartPage {
+  background-color: grey;
   color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.CartPage .container {
+  background-color: teal;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.CartPage .totalPrice {
+  background-color: black;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .appBarContainer {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .titleContainer {
+    margin-bottom: 10px;
   }
 }
